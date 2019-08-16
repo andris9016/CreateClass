@@ -8,15 +8,18 @@ namespace CreateClass
 {
     class Employee : Person
     {
+        private Room room = new Room();
+        public decimal Salary { get; set; }
+        public string Profession { get; set; }
+        public Room Room { get => room; set => room = value; }
+
+
         public Employee(string name, DateTime birthDate, Gender gender, string profession, decimal salary)
             : base(name, birthDate, gender)
         {
             Salary = salary;
             Profession = profession;
         }
-
-        public decimal Salary { get; set; }
-        public string Profession { get; set; }
 
         public override string ToString()
         {
