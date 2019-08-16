@@ -8,7 +8,7 @@ namespace CreateClass
 {
     class Employee : Person
     {
-        private Room room = new Room();
+        private Room room;
         public decimal Salary { get; set; }
         public string Profession { get; set; }
         public Room Room { get => room; set => room = value; }

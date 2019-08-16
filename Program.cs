@@ -15,7 +15,7 @@ namespace CreateClass
             Console.WriteLine(andris.Gender);
 
             Employee evi = new Employee("Évi", new DateTime(1997, 12, 05), Gender.Female, "general manager", 2500);
-            evi.Room.RoomNumber = 15;
+            evi.Room = new Room(15);
             Console.WriteLine(evi);
             Console.WriteLine(evi.Room.RoomNumber);
             Console.ReadLine();
