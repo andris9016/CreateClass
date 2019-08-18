@@ -10,15 +10,17 @@ namespace CreateClass
     {
         static void Main(string[] args)
         {
-            Person andris = new Person("Andris", new DateTime(1990,12,09), Gender.Male);
-            Console.WriteLine(andris);
-            Console.WriteLine(andris.Gender);
 
-            Employee evi = new Employee("Évi", new DateTime(1997, 12, 05), Gender.Female, "general manager", 2500);
-            evi.Room = new Room(15);
-            Console.WriteLine(evi);
-            Console.WriteLine(evi.Room.RoomNumber);
-            Console.ReadLine();
+            Employee kovacs = new Employee("Géza", DateTime.Now, Gender.Male, "léhűtő", 1000);
+            kovacs.Room = new Room(111);
+            Employee kovacs2 = (Employee)kovacs.Clone();
+            kovacs2.Room.RoomNumber = 112;
+            Console.WriteLine(kovacs);
+            Console.WriteLine(kovacs.Room.RoomNumber);
+            Console.WriteLine(kovacs2);
+            Console.WriteLine(kovacs2.Room.RoomNumber);
+            Console.ReadKey();
+
         }
     }
 }
